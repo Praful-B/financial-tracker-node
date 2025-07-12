@@ -1,0 +1,8 @@
+/routes/transactions.js
+Defines routes for API endpoints like:
+
+    GET /transactions
+
+    POST /transactions
+
+    DELETE /transactions/:id

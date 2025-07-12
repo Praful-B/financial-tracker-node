@@ -1,0 +1,9 @@
+Serves the frontend
+
+    index.html: Main UI (dashboard)
+
+    css/styles.css: Styles for frontend
+
+    js/main.js: Handles DOM interaction and fetches API endpoints
+
+In server.js, use express.static('public') to serve this.

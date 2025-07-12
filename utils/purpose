@@ -1,0 +1,7 @@
+Helper functions:
+
+    Read from JSON file
+
+    Write to JSON file
+
+    (Optional: CSV support later)
