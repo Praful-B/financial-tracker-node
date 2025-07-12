@@ -1,13 +1,15 @@
-MVP 
-[] User Auth 
-    [] signup 
+[] Learn JWT
+
+MVP
+[] User Auth
+    [] signup
     [] login
     [] password reset
     [] account delete
 [] Transaction Managment
     [] add income and expences entries
         [] a way to add money to total money
-        [] a way to minus money from total money 
+        [] a way to minus money from total money
     [] able to set date, amount, description, category{ +Coustom categories }
 [] Dashbord / Overview
     [] monthly income / expences summary
@@ -22,7 +24,7 @@ MVP
 [] search and Filter transactions
     [] by date range, categorie, amount, keywords
 
- 
+
 Optional
 [] Expense Insights & Trends
     [] Weekly/monthly/yearly trends
@@ -31,7 +33,3 @@ Optional
 [] goals and saving tracker
     [] Track progress towards goals
 [] darktheme
- 
-
-
-

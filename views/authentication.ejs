@@ -6,14 +6,14 @@
 	<title>Financial Tracker</title>
 </head>
 <body>
-	<form action="/auth/login" method="get" name="login-form" class="login-form">
+	<form action="/auth/login" method="post" name="login-form" class="login-form">
 			<div>
-			    <label for="username-input">User Name:</label>
-				<input type="text" id="username-input" name="username-input" placeholder="username" required>
+				<label for="username-input"><%= locals.username_err? 'Cannot find username!' : 'Username:'  %></label><br>
+				<input type="text" id="username-input" name="username" placeholder="username" required>
 			</div>
 			<div>
-			    <label for="password-input">Password:</label>
-				<input type="password" id="password-input" name="password-input" placeholder="password" required>
+				<label for="username-input"><%= locals.password_err? 'Wrong Password!' : 'Password:'  %></label><br>
+				<input type="password" id="password-input" name="password" placeholder="password" required>
 			</div> <br>
 			<button type="submit">login</button>
 	</form>

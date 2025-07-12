@@ -7,3 +7,5 @@ Serves the frontend
     js/main.js: Handles DOM interaction and fetches API endpoints
 
 In server.js, use express.static('public') to serve this.
+
+add a launching page by adding a index.html file in public/index.html
