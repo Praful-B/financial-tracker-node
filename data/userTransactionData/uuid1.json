@@ -1,0 +1,36 @@
+{
+  "uuid": {
+    "constants": {
+      "username": "",
+      "hashedPassword(bcrypt)": "",
+      "email": "",
+      "timeOfCreation": ""
+    },
+
+    "year-month": {
+      "TotalIncomeThisMonth": "(int) no paranthesis ",
+      "TotalSpendingThisMonth": "(int) no paranthesis",
+      "MoneySpendPerCategory": {
+        "catA": {
+          "totalSumPerCategory": "",
+          "transactionsA": {
+            "transationID": "amount"
+          }
+        },
+        "catB": {},
+        "catC": {},
+        "categories should be addable later by user": {}
+      },
+      "Transactions": {
+        "transactionID(a way to easily index)": {
+          "amount": "(int)",
+          "date": "",
+          "description": "",
+          "category": "only allow exising categories (frontend)"
+        }
+      }
+    },
+    "year-month+1": {},
+    "year-month+2": {}
+  }
+}
