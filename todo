@@ -2,7 +2,7 @@
 
 MVP
 [] User Auth
-    [] signup
+    [] signup [ currently working on ]
     [] login
     [] password reset
     [] account delete
