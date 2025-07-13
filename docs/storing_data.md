@@ -1,23 +1,28 @@
-Overview
-  Each user has a dedicated JSON file, named using a unique UUID.
-  A central file existingUserList.json keeps track of all registered users and their file paths.
-  All user financial data is stored month-wise (YYYY-MM), organized inside their individual file.
-  -Passwords are stored securely using bcrypt hashes.
-  -Categories and transactions are nested for clarity and expandability.
+# Overview
+- Each user has a dedicated JSON file, named using a unique UUID.
+- A central file existingUserList.json keeps track of all registered users and their file paths.
+- All user financial data is stored month-wise (YYYY-MM), organized inside their individual file.
+- Passwords are stored securely using bcrypt hashes.
+- Categories and transactions are nested for clarity and expandability.
 
-Directory Structure
+# Directory Structure
+```
   project-root/
   ├── data/
   │   ├── userTransactionData/
   │   │   ├── <uuid>.json         ← individual user data
   │   └── existingUserList.json   ← user registry (login)
+```
 
-existingUserList.json
-  Purpose:
-  Tracks all users and maps UUIDs to their details and file paths.
-  also helps during [login] to check for username and password
-  during [register] to check for duplicates (smaller file size to iterate through)
+## existingUserList.json
+### Purpose:
+<p>
+Tracks all users and maps UUIDs to their details and file paths. <br>
+also helps during [login] to check for username and password <br>
+during [register] to check for duplicates (smaller file size to iterate through) <br>
+</p>
 
+```
   structure:
   {
     "uuid": {
@@ -71,8 +76,11 @@ existingUserList.json
         "year-month+2": {}
       }
     }
-    Notes:
-    Month keys use ISO format: "YYYY-MM" (e.g., "2025-07")
-    New categories can be added dynamically by the user
-    Transactions reference existing categories only
-    UUID and transaction IDs should be generated using a secure method (like uuidv4)
+```
+
+# Notes:
+
+- Month keys use ISO format: "YYYY-MM" (e.g., "2025-07")
+- New categories can be added dynamically by the user
+- Transactions reference existing categories only
+- UUID and transaction IDs should be generated using a secure method (like uuidv4)

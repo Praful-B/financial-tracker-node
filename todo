@@ -16,11 +16,12 @@ MVP
     [] current balance
     [] pie / bargraph for categorie-wise expences
 [] Monthly spending Budgets
-    [] set monthly spending limits by categorie
+    [] set monthly spending limits by categorie (front end - you should still be able to add to category even after exeding limit)
     [] show progress / spending vs Budgets
 [] reoccuring transactions
     [] add reoocuring transactions
-        [] both income + expences
+        [] income
+        [] expences
 [] search and Filter transactions
     [] by date range, categorie, amount, keywords
 
