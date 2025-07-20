@@ -5,10 +5,10 @@ const path = require("path");
 
 const existingUsersListPath = path.join(
   __dirname,
-  "data/existingUsersList.json",
+  "../data/existingUsersList.json",
 );
 
-async function checkIfEmailExists(res, req, next) {
+async function checkIfEmailExists(req, res, next) {
   const { email } = req.body;
 
   if (!email) {
@@ -33,16 +33,16 @@ async function checkIfEmailExists(res, req, next) {
     );
 
     if (emailExists) {
-      res.status(409).send("Email already exists");
+      return res.status(409).send("Email already exists");
     }
     next();
   });
 }
-async function checkIfUsernameExists(res, req, next) {
+async function checkIfUsernameExists(req, res, next) {
   const { username } = req.body;
 
   if (!username) {
-    return res.status(400).json({ Error: "Username is required" });
+    return res.status(400).json({ error: "Username is required" });
   }
 
   fs.readFile(existingUsersListPath, "utf8", (err, data) => {
@@ -59,11 +59,11 @@ async function checkIfUsernameExists(res, req, next) {
     }
 
     const checkDuplicateUsername = Object.values(users).some((user) => {
-      users.username === username;
+      return users.username === username;
     });
 
     if (checkDuplicateUsername) {
-      res.status(409).send("Username already exists");
+      return res.status(409).send("Username already exists");
     }
 
     next();
